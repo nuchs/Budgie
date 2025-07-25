@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option csharp_namespace = "NestEgg.Grpc";
+
+package NestEgg.Grpc;
+
+// Represents a chunk of the Excel file sent by the client
+message ImportExcelRequest {
+  bytes chunk = 1;
+}
+
+// Response from the server after the import is finished
+message ImportExcelResponse {
+  int32 transactions_imported = 1;
+  string message = 2; // Optional human-readable status
+}
+
+// gRPC service definition
+service TransactionImportService {
+  // Client streams the Excel file (in chunks). Server responds once at the end.
+  rpc ImportTransactions(stream ImportExcelRequest) returns (ImportExcelResponse);
+}

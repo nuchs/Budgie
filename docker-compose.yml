@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+  nestegg:
+    build:
+      context: ./NestEgg
+    container_name: nestegg
+    ports:
+      - "5001:5001"           # gRPC endpoint
+    volumes:
+      - nestegg-data:/app/data  # Persist SQLite DB file
+    environment:
+      - ConnectionStrings__DefaultConnection=Data Source=/app/data/finance.sqlite
+    depends_on:
+      - ollama
+
+  budgie:
+    build:
+      context: ./Budgie
+    container_name: budgie
+    ports:
+      - "5002:5002"           # Blazor app
+    depends_on:
+      - nestegg
+
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+
+volumes:
+  nestegg-data:
+  ollama-data:

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36310.24 d17.14
+VisualStudioVersion = 17.14.36310.24
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Budgie", "Budgie\Budgie.csproj", "{2BA41D87-A1B8-4778-8163-A6562B79B75D}"
 EndProject
@@ -10,6 +10,18 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NestEgg.Grpc", "NestEgg.Grpc\NestEgg.Grpc.csproj", "{2B11C01E-F99E-4277-89E4-B36698202491}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		docker-compose.yml = docker-compose.yml
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{939713FA-C72A-4533-BB34-703D3E4BC1A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{E28C91A5-F6E0-4A1E-9FC6-8EA4AEF5C8CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +41,14 @@ Global
 		{2B11C01E-F99E-4277-89E4-B36698202491}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B11C01E-F99E-4277-89E4-B36698202491}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B11C01E-F99E-4277-89E4-B36698202491}.Release|Any CPU.Build.0 = Release|Any CPU
+		{939713FA-C72A-4533-BB34-703D3E4BC1A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{939713FA-C72A-4533-BB34-703D3E4BC1A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{939713FA-C72A-4533-BB34-703D3E4BC1A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{939713FA-C72A-4533-BB34-703D3E4BC1A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E28C91A5-F6E0-4A1E-9FC6-8EA4AEF5C8CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E28C91A5-F6E0-4A1E-9FC6-8EA4AEF5C8CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E28C91A5-F6E0-4A1E-9FC6-8EA4AEF5C8CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E28C91A5-F6E0-4A1E-9FC6-8EA4AEF5C8CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

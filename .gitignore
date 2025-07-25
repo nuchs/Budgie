@@ -3,6 +3,13 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# Data files
+*.xslx
+*.sqlite
+*.sqlite3
+*.db
+*.db3
+
 # User-specific files
 *.rsuser
 *.suo
